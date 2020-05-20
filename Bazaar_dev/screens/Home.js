@@ -18,7 +18,7 @@ export default class Home extends React.Component {
         color="red"
         style={styles.WHITE}
         iconContent={iconContent}
-        placeholder="What are you for?"
+        placeholder="What are you looking for?"
         onFocus={() => navigation.navigate('البحث')}
       />
     )

@@ -92,21 +92,21 @@ class Header extends React.Component {
 
     return (
       <Block row style={styles.tabs}>
+        <Block>
                       <Select
                 defaultValue="القسم"      
-                defaultIndex={1}
+                defaultIndex={0}
                 options={[1, 2, 3, 4, 5]}
-                onSelect={(index, value) => this.handleQuantity()}
+               // onSelect={(index, value) => this.handleQuantity()}
               />
-
-
-        <Select
-                defaultValue="المدينة"       
-                defaultIndex={1}
-                options={[1, 2, 3, 4, 5]}
-                onSelect={(index, value) => this.handleQuantity()}
-              />
-
+</Block>
+<Block>
+<Select
+  defaultIndex={1}
+  options={[1, 2, 3, 4, 5]}
+  style={styles.MUTED}
+/>
+</Block>
       </Block>
     )
   }
