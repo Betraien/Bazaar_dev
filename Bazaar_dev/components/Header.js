@@ -93,7 +93,7 @@ class Header extends React.Component {
     return (
       <Block row style={styles.tabs}>
                       <Select
-                title="hhhhh"      
+                defaultValue="القسم"      
                 defaultIndex={1}
                 options={[1, 2, 3, 4, 5]}
                 onSelect={(index, value) => this.handleQuantity()}
@@ -101,7 +101,7 @@ class Header extends React.Component {
 
 
         <Select
-                name="hhhhh"      
+                defaultValue="المدينة"       
                 defaultIndex={1}
                 options={[1, 2, 3, 4, 5]}
                 onSelect={(index, value) => this.handleQuantity()}

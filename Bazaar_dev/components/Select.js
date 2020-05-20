@@ -38,7 +38,7 @@ export default class DropDown extends React.Component {
 const styles = StyleSheet.create({
   qty: {
     width: theme.SIZES.BASE * 6,
-    backgroundColor: '#b2ebf2',
+    backgroundColor: materialTheme.COLORS.DEFAULT,
     paddingHorizontal: theme.SIZES.BASE,
     paddingTop: 10,
     paddingBottom: 9.5,
