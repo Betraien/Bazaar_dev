@@ -43,7 +43,7 @@ export default class Cart extends React.Component {
     this.setState({ cart });
   }
 
-  renderProduct = () => {
+  renderProduct = ({ item }) => {
     const { navigation } = this.props;
 
     return (
@@ -178,7 +178,7 @@ export default class Cart extends React.Component {
         <Block center>
           <Button flex center style={styles.checkout}
             color={materialTheme.COLORS.ACTIVE}
-            onPress={() => navigation.navigate('Sign In')} >
+            onPress={() => navigation.navigate('تسجيل دخول')} >
             PROCEED TO CHECKOUT
           </Button>
         </Block>
@@ -198,7 +198,7 @@ export default class Cart extends React.Component {
         <Block center style={{ paddingHorizontal: theme.SIZES.BASE }}>
           <Button flex center style={styles.checkout}
             color={materialTheme.COLORS.ACTIVE}
-            onPress={() => navigation.navigate('SignIn')} >
+            onPress={() => navigation.navigate('تسجيل دخول')} >
             PROCEED TO CHECKOUT
           </Button>
         </Block>
@@ -221,7 +221,7 @@ export default class Cart extends React.Component {
           center
           style={styles.checkout}
           color={materialTheme.COLORS.ACTIVE}
-          onPress={() => navigation.navigate('SignIn')} >
+          onPress={() => navigation.navigate('تسجيل دخول')} >
           PROCEED TO CHECKOUT
           </Button>
       </Block>
