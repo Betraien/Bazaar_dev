@@ -52,12 +52,11 @@ export default class Home extends React.Component {
         contentContainerStyle={styles.products}>
         <Block flex>
           <Product product={homeImages[0]} horizontal />
-          <Block flex row>
-            <Product product={homeImages[1]} style={{ marginRight: theme.SIZES.BASE }} />
-            <Product product={homeImages[2]} />
-          </Block>
-          <Product product={homeImages[3]} horizontal />
-          <Product product={homeImages[4]} full />
+            <Product product={homeImages[1]} horizontal />
+            <Product product={homeImages[2]} horizontal />
+     
+         
+          <Product product={homeImages[4]} horizontal />
         </Block>
       </ScrollView>
     )
@@ -74,7 +73,8 @@ export default class Home extends React.Component {
 
 const styles = StyleSheet.create({
   home: {
-    width: width,    
+    width: width,  
+    backgroundColor: '#e0f7fa',  
   },
   search: {
     height: 48,
