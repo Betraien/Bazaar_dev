@@ -404,7 +404,7 @@ export default class Components extends React.Component {
             <Text
               size={12}
               color={theme.COLORS.PRIMARY}
-              onPress={() => navigation.navigate('Home')}>
+              onPress={() => navigation.navigate('الرئيسية')}>
               View All
             </Text>
           </Block>

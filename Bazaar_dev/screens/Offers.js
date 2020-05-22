@@ -7,7 +7,7 @@ import { Icon, Product } from '../components/';
 const { width } = Dimensions.get('screen');
 import homeImages from '../constants/images/home';
 
-export default class Home extends React.Component {
+export default class Offers extends React.Component {
   renderSearch = () => {
     const { navigation } = this.props;
     const iconContent = <Icon size={16} color={theme.COLORS.MUTED} name="zoom-in" family="material" />
@@ -65,6 +65,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <Block flex center style={styles.home}>
+        {this.renderTabs}
         {this.renderProducts()}
       </Block>
     );

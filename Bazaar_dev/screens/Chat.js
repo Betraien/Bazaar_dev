@@ -188,7 +188,7 @@ export default class Chat extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    
+    backgroundColor: '#e0e0e0', 
   },
   messageFormContainer: {
     height: 96,
