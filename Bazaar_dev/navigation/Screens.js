@@ -45,10 +45,10 @@ const Drawer = createDrawerNavigator();
 
 const profile = {
   avatar: Images.Profile,
-  name: "Rachel Brown",
-  type: "Seller",
-  plan: "Pro",
-  rating: 4.8
+  name: "عبدالعزيز",
+  type: "مبرمج",
+  plan: "A+",
+  rating: 4.9
 };
 
 function ProfileStack(props) {
@@ -807,35 +807,21 @@ function HomeStack(props) {
   return (
     <Stack.Navigator mode="card" headerMode="screen">
       <Stack.Screen
-        name="الرئيسية"
+        name="الخدمات"
         component={HomeScreen}
         options={{
           header: ({ navigation, scene }) => (
             <Header
               search
               options
-              title="الرئيسية"
+              title="الخدمات"
               navigation={navigation}
               scene={scene}
             />
           )
         }}
       />
-      <Stack.Screen
-        name="الطلبات"
-        component={RequestsScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              search
-              options
-              title="الطلبات"
-              navigation={navigation}
-              scene={scene}
-            />
-          )
-        }}
-      />
+
             <Stack.Screen
         name="العروض"
         component={OffersScreen}
@@ -997,14 +983,14 @@ function RequestsStack(props) {
       />
 
     <Stack.Screen
-        name="الرئيسية"
+        name="الخدمات"
         component={HomeScreen}
         options={{
           header: ({ navigation, scene }) => (
             <Header
               search
               options
-              title="الرئيسية"
+              title="الخدمات"
               navigation={navigation}
               scene={scene}
             />
@@ -1174,14 +1160,14 @@ function OffersStack(props) {
       <Stack.Screen
 
       
-        name="الرئيسية"
+        name="الخدمات"
         component={HomeScreen}
         options={{
           header: ({ navigation, scene }) => (
             <Header
               search
               options
-              title="الرئيسية"
+              title="الخدمات"
               navigation={navigation}
               scene={scene}
             />
@@ -1349,7 +1335,7 @@ function AppStack(props) {
       initialRouteName="العروض"
     >
       <Drawer.Screen
-        name="الرئيسية"
+        name="الخدمات"
         component={HomeStack}
         options={{
           drawerIcon: ({ focused }) => (

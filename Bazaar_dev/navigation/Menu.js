@@ -26,10 +26,10 @@ function CustomDrawerContent({
 }) {
   const insets = useSafeArea();
   const screens = [
-    "الرئيسية",
+    "الخدمات",
     "الطلبات",
-    "الاعدادات",
     "العروض",
+    "الاعدادات",
     "Components"
   ];
   return (

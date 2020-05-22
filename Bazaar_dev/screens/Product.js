@@ -138,45 +138,24 @@ export default class Product extends React.Component {
                   <Block row>
                     <Image source={{ uri: Images.Profile }} style={styles.avatar} />
                     <Block>
-                      <Text size={14}>Rachel Brown</Text>
-                      <Text size={14} muted>Pro Seller</Text>
+                      <Text size={14}>عبدالعزيز</Text>
+                      <Text size={14} muted>مبرمج</Text>
                     </Block>
                   </Block>
-                  <Text size={18} bold>$735</Text>
+                  <Text size={18} bold>800 ريال</Text>
                 </Block>
               </Block>
               <Block style={{ padding: theme.SIZES.BASE }}>
-                <Text size={16}>Size</Text>
+                <Text size={16}>الوصف</Text>
                 <Block card style={{ marginTop: 16 }}>
-                  <Block row>
-                    <Block flex middle style={[styles.size, styles.roundTopLeft, selectedSize === 'XS' ? styles.active : null ]}>
-                      {this.renderSize('XS')}
-                    </Block>
-                    <Block flex middle style={[styles.size, selectedSize === 'S' ? styles.active : null, ]}>
-                      {this.renderSize('S')}
-                    </Block>
-                    <Block flex middle style={[styles.size, styles.roundTopRight, selectedSize === 'M' ? styles.active : null, ]}>
-                      {this.renderSize('M')}
-                    </Block>
-                  </Block>
-                  <Block row>
-                    <Block flex middle style={[styles.size, styles.roundBottomLeft, selectedSize === 'L' ? styles.active : null, ]}>
-                      {this.renderSize('L')}
-                    </Block>
-                    <Block flex middle style={[styles.size, { borderBottomWidth: 0 }, selectedSize === 'XL' ? styles.active : null, ]}>
-                      {this.renderSize('XL')}
-                    </Block>
-                    <Block flex middle style={[styles.size, styles.roundBottomRight, selectedSize === '2XL' ? styles.active : null, ]}>
-                      {this.renderSize('2XL')}
-                    </Block>
-                  </Block>
+<Text right> hhjjjjjjjjjjjjjjjjjjj</Text>
                 </Block>
                 <Button
                   shadowless
                   style={styles.addToCart}
-                  color={materialTheme.COLORS.BUTTON_COLOR}
+                  color={materialTheme.COLORS.DEFAULT}
                   onPress={() => navigation.navigate('Cart')}>
-                  ADD TO CART
+                  تقديم عرض
                 </Button>
               </Block>
             </ScrollView>

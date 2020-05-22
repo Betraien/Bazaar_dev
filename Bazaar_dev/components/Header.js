@@ -62,6 +62,7 @@ class Header extends React.Component {
       case 'Category':
       case 'Deals':
       case 'الطلبات':
+      case 'الرئيسية':  
       case 'العروض':  
       case 'Woman':
       case 'Man':
