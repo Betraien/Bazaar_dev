@@ -16,7 +16,6 @@ import materialTheme from '../constants/Theme';
 import Images from "../constants/Images";
 import { iPhoneX, HeaderHeight } from "../constants/utils";
 const { height, width } = Dimensions.get('window');
-
 export default class Product extends React.Component {
   state = {
     selectedSize: null,
@@ -142,18 +141,18 @@ export default class Product extends React.Component {
                       <Text size={14} muted>مبرمج</Text>
                     </Block>
                   </Block>
-                  <Text size={18} bold>800 ريال</Text>
+                  <Text size={18} bold>{product.price}</Text>
                 </Block>
               </Block>
               <Block style={{ padding: theme.SIZES.BASE }}>
-                <Text size={16}>الوصف</Text>
+                <Text size={16}>تفاصيل العرض</Text>
                 <Block card style={{ marginTop: 16 }}>
-<Text right> hhjjjjjjjjjjjjjjjjjjj</Text>
+<Text right> {product.description} </Text>
                 </Block>
                 <Button
                   shadowless
                   style={styles.addToCart}
-                  color={materialTheme.COLORS.DEFAULT}
+                  color= {materialTheme.COLORS.BUTTON_COLOR}
                   onPress={() => navigation.navigate('Cart')}>
                   تقديم عرض
                 </Button>
