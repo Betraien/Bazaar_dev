@@ -132,22 +132,22 @@ export default class Product extends React.Component {
             {this.renderChatButton()}
             <ScrollView vertical={true} showsVerticalScrollIndicator={false}>
               <Block style={{ paddingHorizontal: theme.SIZES.BASE, paddingTop: theme.SIZES.BASE * 2 }}>
-                <Text size={28} style={{ paddingBottom: 24 }}>{product.title}</Text>
+                <Text size={28} center style={{ paddingBottom: 24 }}>{product.title}</Text>
                 <Block row space="between">
                   <Block row>
                     <Image source={{ uri: Images.Profile }} style={styles.avatar} />
                     <Block>
-                      <Text size={14}>عبدالعزيز</Text>
-                      <Text size={14} muted>مبرمج</Text>
+                      <Text center size={14}>عبدالعزيز</Text>
+                      <Text center style={{color:"red"}} size={14} muted>ادارة</Text>
                     </Block>
                   </Block>
-                  <Text size={18} bold>{product.price}</Text>
+                  <Text center size={18} bold>{product.price} ريال</Text>
                 </Block>
               </Block>
               <Block style={{ padding: theme.SIZES.BASE }}>
-                <Text size={16}>تفاصيل العرض</Text>
+                <Text center size={16}>تفاصيل العرض</Text>
                 <Block card style={{ marginTop: 16 }}>
-<Text right> {product.description} </Text>
+<Text center right> {product.description} </Text>
                 </Block>
                 <Button
                   shadowless

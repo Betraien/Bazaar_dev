@@ -46,7 +46,7 @@ const Drawer = createDrawerNavigator();
 const profile = {
   avatar: Images.Profile,
   name: "عبدالعزيز",
-  type: "مبرمج",
+  type: "ادارة",
   plan: "A+",
   rating: 4.9
 };
@@ -112,6 +112,7 @@ function SettingsStack(props) {
           )
         }}
       />
+
       <Stack.Screen
         name="Agreement"
         component={AgreementScreen}
@@ -126,6 +127,7 @@ function SettingsStack(props) {
           )
         }}
       />
+
       <Stack.Screen
         name="Privacy"
         component={PrivacyScreen}
