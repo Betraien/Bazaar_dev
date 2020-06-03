@@ -1,10 +1,10 @@
 import React from 'react';
 import { withNavigation } from '@react-navigation/compat';
 import { StyleSheet, Dimensions, Image, TouchableWithoutFeedback } from 'react-native';
-import { Block, Text, theme } from 'galio-framework';
+import {Icon, Button, Block, Text, theme } from 'galio-framework';
+import { Ionicons } from '@expo/vector-icons';
 
 const { width } = Dimensions.get('screen');
-
 class RequestProduct extends React.Component {
   render() {
     const { navigation, product, horizontal, full, style, priceColor, imageStyle } = this.props;
@@ -18,11 +18,39 @@ class RequestProduct extends React.Component {
           </Block>
         </TouchableWithoutFeedback>
         <TouchableWithoutFeedback onPress={() => navigation.navigate('Product', { product: product })}>
-          <Block flex space="between" style={styles.productDescription}>
-            <Text size={14} style={styles.productTitle}>{product.title}</Text>
-            <Text size={12} muted={!priceColor} color={priceColor}>{product.price} المملكة العربيةالسعودية، الخبر</Text>
-            <Text size={12} muted={!priceColor} color={priceColor}>{product.name} </Text>
-          </Block>
+        <Block  flex space="between" style={styles.productDescription}>
+
+<Text  size={16} style={styles.productTitle} >{product.title}</Text>
+
+
+<Block style={{flex:1, flexDirection: 'column'}}>
+<Text color={theme.COLORS.MUTED} size={12}>
+        <Icon name="map-marker" family="font-awesome" color={theme.COLORS.MUTED} size={16}
+          onPress={() => navigation.navigate('Deals')}/> 
+        {`السعودية،`} حائل
+      </Text>
+
+      <Text size={12} muted={!priceColor} color={priceColor}>شبيب</Text>
+      </Block>
+
+
+      <Block style={{flex: 1, flexDirection: 'row-reverse'}}>
+      
+      <Button round align="left" size="small" onlyIcon icon="chat" iconFamily="Entypo" iconSize={30}   iconColor="cadetblue" color="white" style={{ width: 30, height: 30 }} ></Button>
+      <Block style={{flex: 1, flexDirection: 'row'}}>
+      <Text>اضافة للقائمة</Text> 
+      <Text>     </Text>  
+      <Ionicons name="ios-add" size={30} color="crimson" onPress={() => navigation.navigate('Deals')}/>
+  
+</Block>
+      <Block style={{flex: 1, flexDirection: 'row'}}>
+      <Ionicons name="ios-more" size={30} color="gray" onPress={() => navigation.navigate('Deals')}/>
+      </Block>
+</Block>
+
+
+
+</Block>
         </TouchableWithoutFeedback>
       </Block>
     );
