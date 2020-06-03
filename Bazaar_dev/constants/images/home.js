@@ -5,6 +5,7 @@ const home = [
     image: 'https://mimgcdn.haraj.com.sa/userfiles30/2020-05-22/750x453-1_-HbDT-09nE34TtE.jpg',
     price: 40,
     name: "ناصر",
+    description: "للبيع العاب مستعمله GTA5 FIFA 20",
   },
   {
     title: ' لينوفو يوجا 520 جيل 7 كور اي 5 شاشة لمس',
@@ -12,6 +13,7 @@ const home = [
     image: 'https://mimg1cdn.haraj.com.sa/userfiles30/2020-05-22/800x451-1_-5ec828443556d.jpg',
     price: 4555,
     name: "عبدالعزيز",
+    description: "لينوفو يوجا 520 جيل 7 كور اي 5 شاشة لمس",
   },
   {
     title: 'افالون 2016 جديده',
@@ -20,13 +22,15 @@ const home = [
     price: 149000,
     horizontal: true,
     name: "عبدالله",
+    description: "حالة السيارة: مستعملة القير: قير اوتماتيك نوع الوقود: بنزين الممشى: 171",
   },
   {
-    title: "Looking for Men's watches?",
+    title: "ساعه للبيع",
     // image: 'https://source.unsplash.com/YHbcum51JB0/840x840',
     image: 'https://images.unsplash.com/photo-1490367532201-b9bc1dc483f6?crop=entropy&w=840&h=840&fit=crop',
     price: 40,
     name: "عبدالعزيز",
+    description: "مع ضمان",
   },
 
 

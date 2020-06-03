@@ -3,13 +3,12 @@ import { StyleSheet, Dimensions, ScrollView, Image, ImageBackground, Platform } 
 import { Block, Text, theme } from 'galio-framework';
 import { LinearGradient } from 'expo-linear-gradient';
 
-import { Icon } from '../components';
+import { Icon, Product } from '../components';
 import { Images, materialTheme } from '../constants';
 import { HeaderHeight } from "../constants/utils";
 
 const { width } = Dimensions.get('screen');
 const thumbMeasure = (width - 48 - 32) / 3;
-
 export default class Profile extends React.Component {
   render() {
     return (
@@ -20,13 +19,13 @@ export default class Profile extends React.Component {
           imageStyle={styles.profileImage}>
           <Block flex style={styles.profileDetails}>
             <Block style={styles.profileTexts}>
-              <Text color="white" size={28} style={{ paddingBottom: 8 }}> عبدالعزيز الزماي</Text>
+    <Text color="white" size={28} style={{ paddingBottom: 8 }}> عبدالعزيز الزماي</Text>
               <Block row space="between">
                 <Block row>
                   <Block middle style={styles.pro}>
                     <Text size={16} color="white">A+</Text>
                   </Block>
-                  <Text color="white" size={16} muted style={styles.seller}>مبرمج</Text>
+                  <Text color="white" size={16} muted style={styles.seller}>ادارة</Text>
                   <Text size={16} color={materialTheme.COLORS.WARNING}>
                     4.8 <Icon name="shape-star" family="GalioExtra" size={14} />
                   </Text>
@@ -61,7 +60,7 @@ export default class Profile extends React.Component {
               </Block>
               <Block row space="between" style={{ paddingVertical: 16, alignItems: 'baseline' }}>
                 <Text size={16}>العروض</Text>
-                <Text size={12} color={theme.COLORS.PRIMARY} onPress={() => this.props.navigation.navigate('الرئيسية')}> 
+                <Text size={12} color={theme.COLORS.PRIMARY} onPress={() => this.props.navigation.navigate('الخدمات')}> 
                 المزيد </Text>
               </Block>
               <Block row space="between" style={{ flexWrap: 'wrap' }} >
