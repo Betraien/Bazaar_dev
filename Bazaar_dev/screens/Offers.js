@@ -55,8 +55,6 @@ export default class Offers extends React.Component {
             <Product product={homeImages[1]} horizontal />
             <Product product={homeImages[2]} horizontal />
      
-         
-          <Product product={homeImages[4]} horizontal />
         </Block>
       </ScrollView>
     )

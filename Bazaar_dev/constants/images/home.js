@@ -31,12 +31,13 @@ const home = [
 
 
   {
-    title: 'حساب ابل ستور appstore',
+    title: 'مطلوب حساب نتفلكس 4K',
     // image: 'https://source.unsplash.com/Ws4wd-vJ9M0/840x840',
-    image: 'https://imgcdn.haraj.com.sa/cache2/900x506-1_-zep2B0RYE66Nql.jpg',
+    image: 'https://www.albayan.ae/polopoly_fs/1.3838312.1587506596!/image/image.JPG',
     price: 39,
-    name: "خالد",
+    name: "شبيب",
   },
+  
 ];
 
 const deals = [

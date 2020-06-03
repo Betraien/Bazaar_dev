@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Dimensions, ScrollView } from 'react-native';
 import { Button, Block, Text, Input, theme } from 'galio-framework';
 
-import { Icon, Product } from '../components/';
+import { Icon, RequestProduct } from '../components/';
 
 const { width } = Dimensions.get('screen');
 import homeImages from '../constants/images/home';
@@ -51,12 +51,8 @@ export default class Requests extends React.Component {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.products}>
         <Block flex>
-          <Product product={homeImages[0]} horizontal />
-            <Product product={homeImages[1]} horizontal />
-            <Product product={homeImages[2]} horizontal />
+          <RequestProduct product={homeImages[4]} />
      
-         
-          <Product product={homeImages[4]} horizontal />
         </Block>
       </ScrollView>
     )
