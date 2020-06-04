@@ -12,12 +12,12 @@ class RequestProduct extends React.Component {
 
     return (
       <Block row={horizontal} card flex style={[styles.product, styles.shadow, style]}>
-        <TouchableWithoutFeedback onPress={() => navigation.navigate('Product', { product: product })}>
+        <TouchableWithoutFeedback onPress={() => navigation.navigate('RequestProduct', { product: product })}>
           <Block flex style={[styles.imageContainer, styles.shadow]}>
             <Image source={{ uri: product.image }} style={imageStyles} />
           </Block>
         </TouchableWithoutFeedback>
-        <TouchableWithoutFeedback onPress={() => navigation.navigate('Product', { product: product })}>
+        <TouchableWithoutFeedback onPress={() => navigation.navigate('RequestProduct', { product: product })}>
         <Block  flex space="between" style={styles.productDescription}>
 
 <Text  size={16} style={styles.productTitle} >{product.title}</Text>
@@ -27,7 +27,7 @@ class RequestProduct extends React.Component {
 <Text color={theme.COLORS.MUTED} size={12}>
         <Icon name="map-marker" family="font-awesome" color={theme.COLORS.MUTED} size={16}
           onPress={() => navigation.navigate('Deals')}/> 
-        {`السعودية،`} حائل
+        {`السعودية،`} الظهران
       </Text>
 
       <Text size={12} muted={!priceColor} color={priceColor}>شبيب</Text>
@@ -35,11 +35,9 @@ class RequestProduct extends React.Component {
 
 
       <Block style={{flex: 1, flexDirection: 'row-reverse'}}>
-      
+  
       <Button round align="left" size="small" onlyIcon icon="chat" iconFamily="Entypo" iconSize={30}   iconColor="cadetblue" color="white" style={{ width: 30, height: 30 }} ></Button>
       <Block style={{flex: 1, flexDirection: 'row'}}>
-      <Text>اضافة للقائمة</Text> 
-      <Text>     </Text>  
       <Ionicons name="ios-add" size={30} color="crimson" onPress={() => navigation.navigate('Deals')}/>
   
 </Block>

@@ -18,6 +18,9 @@ import OffersScreen from "../screens/Offers";
 import CategoriesScreen from "../screens/Categories";
 import CategoryScreen from "../screens/Category";
 import ProductScreen from "../screens/Product";
+import RequestProductScreen from "../screens/RequestProduct";
+import OfferProductScreen from "../screens/OfferProduct";
+import ServiceProductScreen from "../screens/ServiceProduct";
 import GalleryScreen from "../screens/Gallery";
 import ChatScreen from "../screens/Chat";
 import RequestsScreen from "../screens/Requests";
@@ -318,6 +321,57 @@ function WomanStack(props) {
           headerTransparent: true
         }}
       />
+            <Stack.Screen
+        name="RequestProduct"
+        component={RequestProductScreen}
+        options={{
+          header: ({ navigation, scene }) => (
+            <Header
+              back
+              white
+              transparent
+              title=""
+              navigation={navigation}
+              scene={scene}
+            />
+          ),
+          headerTransparent: true
+        }}
+      />
+            <Stack.Screen
+        name="OfferProduct"
+        component={OfferProductScreen}
+        options={{
+          header: ({ navigation, scene }) => (
+            <Header
+              back
+              white
+              transparent
+              title=""
+              navigation={navigation}
+              scene={scene}
+            />
+          ),
+          headerTransparent: true
+        }}
+      />
+            <Stack.Screen
+        name="ServiceProduct"
+        component={ServiceProductScreen}
+        options={{
+          header: ({ navigation, scene }) => (
+            <Header
+              back
+              white
+              transparent
+              title=""
+              navigation={navigation}
+              scene={scene}
+            />
+          ),
+          headerTransparent: true
+        }}
+      />
       <Stack.Screen
         name="Gallery"
         component={GalleryScreen}
@@ -461,6 +515,58 @@ function ManStack(props) {
           headerTransparent: true
         }}
       />
+            <Stack.Screen
+        name="RequestProduct"
+        component={RequestProductScreen}
+        options={{
+          header: ({ navigation, scene }) => (
+            <Header
+              back
+              white
+              transparent
+              title=""
+              navigation={navigation}
+              scene={scene}
+            />
+          ),
+          headerTransparent: true
+        }}
+      />
+            <Stack.Screen
+        name="OfferProduct"
+        component={OfferProductScreen}
+        options={{
+          header: ({ navigation, scene }) => (
+            <Header
+              back
+              white
+              transparent
+              title=""
+              navigation={navigation}
+              scene={scene}
+            />
+          ),
+          headerTransparent: true
+        }}
+      />
+            <Stack.Screen
+        name="ServiceProduct"
+        component={ServiceProductScreen}
+        options={{
+          header: ({ navigation, scene }) => (
+            <Header
+              back
+              white
+              transparent
+              title=""
+              navigation={navigation}
+              scene={scene}
+            />
+          ),
+          headerTransparent: true
+        }}
+      />
+      
       <Stack.Screen
         name="Gallery"
         component={GalleryScreen}
@@ -590,6 +696,57 @@ function KidsStack(props) {
       <Stack.Screen
         name="Product"
         component={ProductScreen}
+        options={{
+          header: ({ navigation, scene }) => (
+            <Header
+              back
+              white
+              transparent
+              title=""
+              navigation={navigation}
+              scene={scene}
+            />
+          ),
+          headerTransparent: true
+        }}
+      />
+            <Stack.Screen
+        name="RequestProduct"
+        component={RequestProductScreen}
+        options={{
+          header: ({ navigation, scene }) => (
+            <Header
+              back
+              white
+              transparent
+              title=""
+              navigation={navigation}
+              scene={scene}
+            />
+          ),
+          headerTransparent: true
+        }}
+      />
+            <Stack.Screen
+        name="OfferProduct"
+        component={OfferProductScreen}
+        options={{
+          header: ({ navigation, scene }) => (
+            <Header
+              back
+              white
+              transparent
+              title=""
+              navigation={navigation}
+              scene={scene}
+            />
+          ),
+          headerTransparent: true
+        }}
+      />
+            <Stack.Screen
+        name="ServiceProduct"
+        component={ServiceProductScreen}
         options={{
           header: ({ navigation, scene }) => (
             <Header
@@ -907,6 +1064,57 @@ function HomeStack(props) {
           headerTransparent: true
         }}
       />
+            <Stack.Screen
+        name="RequestProduct"
+        component={RequestProductScreen}
+        options={{
+          header: ({ navigation, scene }) => (
+            <Header
+              back
+              white
+              transparent
+              title=""
+              navigation={navigation}
+              scene={scene}
+            />
+          ),
+          headerTransparent: true
+        }}
+      />
+            <Stack.Screen
+        name="OfferProduct"
+        component={OfferProductScreen}
+        options={{
+          header: ({ navigation, scene }) => (
+            <Header
+              back
+              white
+              transparent
+              title=""
+              navigation={navigation}
+              scene={scene}
+            />
+          ),
+          headerTransparent: true
+        }}
+      />
+            <Stack.Screen
+        name="ServiceProduct"
+        component={ServiceProductScreen}
+        options={{
+          header: ({ navigation, scene }) => (
+            <Header
+              back
+              white
+              transparent
+              title=""
+              navigation={navigation}
+              scene={scene}
+            />
+          ),
+          headerTransparent: true
+        }}
+      />
       <Stack.Screen
         name="Gallery"
         component={GalleryScreen}
@@ -1082,6 +1290,57 @@ function RequestsStack(props) {
           headerTransparent: true
         }}
       />
+            <Stack.Screen
+        name="RequestProduct"
+        component={RequestProductScreen}
+        options={{
+          header: ({ navigation, scene }) => (
+            <Header
+              back
+              white
+              transparent
+              title=""
+              navigation={navigation}
+              scene={scene}
+            />
+          ),
+          headerTransparent: true
+        }}
+      />
+            <Stack.Screen
+        name="OfferProduct"
+        component={OfferProductScreen}
+        options={{
+          header: ({ navigation, scene }) => (
+            <Header
+              back
+              white
+              transparent
+              title=""
+              navigation={navigation}
+              scene={scene}
+            />
+          ),
+          headerTransparent: true
+        }}
+      />
+            <Stack.Screen
+        name="ServiceProduct"
+        component={ServiceProductScreen}
+        options={{
+          header: ({ navigation, scene }) => (
+            <Header
+              back
+              white
+              transparent
+              title=""
+              navigation={navigation}
+              scene={scene}
+            />
+          ),
+          headerTransparent: true
+        }}
+      />
       <Stack.Screen
         name="Gallery"
         component={GalleryScreen}
@@ -1232,6 +1491,57 @@ function OffersStack(props) {
       <Stack.Screen
         name="Product"
         component={ProductScreen}
+        options={{
+          header: ({ navigation, scene }) => (
+            <Header
+              back
+              white
+              transparent
+              title=""
+              navigation={navigation}
+              scene={scene}
+            />
+          ),
+          headerTransparent: true
+        }}
+      />
+            <Stack.Screen
+        name="RequestProduct"
+        component={RequestProductScreen}
+        options={{
+          header: ({ navigation, scene }) => (
+            <Header
+              back
+              white
+              transparent
+              title=""
+              navigation={navigation}
+              scene={scene}
+            />
+          ),
+          headerTransparent: true
+        }}
+      />
+            <Stack.Screen
+        name="OfferProduct"
+        component={OfferProductScreen}
+        options={{
+          header: ({ navigation, scene }) => (
+            <Header
+              back
+              white
+              transparent
+              title=""
+              navigation={navigation}
+              scene={scene}
+            />
+          ),
+          headerTransparent: true
+        }}
+      />
+            <Stack.Screen
+        name="ServiceProduct"
+        component={ServiceProductScreen}
         options={{
           header: ({ navigation, scene }) => (
             <Header
