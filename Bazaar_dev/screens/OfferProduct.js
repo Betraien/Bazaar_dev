@@ -145,7 +145,7 @@ export default class OfferProduct extends React.Component {
                 </Block>
               </Block>
               <Block style={{ padding: theme.SIZES.BASE }}>
-                <Text center size={16}>تفاصيل العرض</Text>
+                <Text center size={16}>تفاصيل الطلب</Text>
                 <Block card style={{ marginTop: 16 }}>
 <Text center right> {product.description} </Text>
                 </Block>

@@ -37,6 +37,9 @@ import NotificationsScreen from "../screens/Notifications";
 import PrivacyScreen from "../screens/Privacy";
 import AboutScreen from "../screens/About";
 import AgreementScreen from "../screens/Agreement";
+import ServiceScreen from "../screens/Services";
+
+
 
 import CustomDrawerContent from "./Menu";
 import { tabs } from "../constants/";
@@ -967,7 +970,7 @@ function HomeStack(props) {
     <Stack.Navigator mode="card" headerMode="screen">
       <Stack.Screen
         name="الخدمات"
-        component={HomeScreen}
+        component={ServiceScreen}
         options={{
           header: ({ navigation, scene }) => (
             <Header
@@ -996,6 +999,22 @@ function HomeStack(props) {
           )
         }}
       />
+
+      <Stack.Screen
+              name="الطلبات"
+              component={RequestsScreen}
+              options={{
+                header: ({ navigation, scene }) => (
+                  <Header
+                    search
+                    options
+                    title="الطلبات"
+                    navigation={navigation}
+                    scene={scene}
+                  />
+                )
+              }}
+            />
 
       <Stack.Screen
         name="Deals"
@@ -1064,7 +1083,7 @@ function HomeStack(props) {
           headerTransparent: true
         }}
       />
-            <Stack.Screen
+         <Stack.Screen
         name="RequestProduct"
         component={RequestProductScreen}
         options={{

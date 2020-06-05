@@ -154,7 +154,7 @@ export default class Product extends React.Component {
                   style={styles.addToCart}
                   color= {materialTheme.COLORS.BUTTON_COLOR}
                   onPress={() => navigation.navigate('Cart')}>
-                  تقديم عرض
+                  hhhhh
                 </Button>
               </Block>
             </ScrollView>

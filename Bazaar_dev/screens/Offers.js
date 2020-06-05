@@ -2,12 +2,22 @@ import React from 'react';
 import { StyleSheet, Dimensions, ScrollView } from 'react-native';
 import { Button, Block, Text, Input, theme } from 'galio-framework';
 
-import { Icon, Product } from '../components/';
+import { Icon, OfferProduct } from '../components/';
 
 const { width } = Dimensions.get('screen');
 import homeImages from '../constants/images/home';
 
 export default class Offers extends React.Component {
+  objects = [
+    {
+      title: ' لينوفو يوجا 520 جيل 7 كور اي 5 شاشة لمس',
+      // image: 'https://source.unsplash.com/dS2hi__ZZMk/840x840',
+      image: 'https://mimg1cdn.haraj.com.sa/userfiles30/2020-05-22/800x451-1_-5ec828443556d.jpg',
+      price: 1111,
+      name: "عبدالعزيز",
+      description: "لينوفو يوجا 520 جيل 7 كور اي 5 شاشة لمس",
+    }
+  ]
   renderSearch = () => {
     const { navigation } = this.props;
     const iconContent = <Icon size={16} color={theme.COLORS.MUTED} name="zoom-in" family="material" />
@@ -51,9 +61,8 @@ export default class Offers extends React.Component {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.products}>
         <Block flex>
-          <Product product={homeImages[0]} horizontal />
-            <Product product={homeImages[1]} horizontal />
-            <Product product={homeImages[2]} horizontal />
+          <OfferProduct product={this.objects[0]} horizontal />
+
      
         </Block>
       </ScrollView>

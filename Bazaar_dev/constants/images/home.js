@@ -33,7 +33,6 @@ const home = [
     description: "مع ضمان",
   },
 
-
   {
     title: 'مطلوب حساب نتفلكس 4K',
     // image: 'https://source.unsplash.com/Ws4wd-vJ9M0/840x840',
