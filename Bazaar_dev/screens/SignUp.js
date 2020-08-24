@@ -2,6 +2,7 @@ import React from 'react';
 import { Alert, Dimensions, StyleSheet, KeyboardAvoidingView, Platform } from 'react-native';
 
 import { Block, Button, Input, Text, theme } from 'galio-framework';
+
 import { LinearGradient } from 'expo-linear-gradient';
 import { materialTheme } from '../constants/';
 import { HeaderHeight } from "../constants/utils";
@@ -87,8 +88,8 @@ export default class SignUp extends React.Component {
                   />
                 </Block>
               </Block>
-              <Text color='#fff' center size={20}>
-                انشاء حساب جديد
+              <Text color='#fff' center size={theme.SIZES.FONT * 0.875}>
+                or be classical
               </Text>
             </Block>
 
@@ -99,7 +100,7 @@ export default class SignUp extends React.Component {
                   placeholderTextColor={materialTheme.COLORS.PLACEHOLDER}
                   borderless
                   color="white"
-                  placeholder="اسم المستخدم"
+                  placeholder="Username"
                   autoCapitalize="none"
                   style={[styles.input, this.state.active.user ? styles.inputActive : null]}
                   onChangeText={text => this.handleChange('user', text)}
@@ -112,7 +113,7 @@ export default class SignUp extends React.Component {
                   borderless
                   color="white"
                   type="email-address"
-                  placeholder="البريد الالكتروني"
+                  placeholder="Email"
                   autoCapitalize="none"
                   style={[styles.input, this.state.active.email ? styles.inputActive : null]}
                   onChangeText={text => this.handleChange('email', text)}
@@ -126,7 +127,7 @@ export default class SignUp extends React.Component {
                   color="white"
                   password
                   viewPass
-                  placeholder="كلمة المرور"
+                  placeholder="Password"
                   iconColor="white"
                   style={[styles.input, this.state.active.password ? styles.inputActive : null]}
                   onChangeText={text => this.handleChange('password', text)}
@@ -140,11 +141,11 @@ export default class SignUp extends React.Component {
                   style={{ height: 48 }}
                   color={materialTheme.COLORS.BUTTON_COLOR}
                 >
-                  تسجيل
+                  SIGN UP
                 </Button>
-                <Button color="transparent" shadowless onPress={() => navigation.navigate('تسجيل دخول')}>
+                <Button color="transparent" shadowless onPress={() => navigation.navigate('Sign In')}>
                   <Text center color={theme.COLORS.WHITE} size={theme.SIZES.FONT * 0.75}>
-                    هل لديك حساب؟ سجل دخول
+                    Already have an account? Sign In
                   </Text>
                 </Button>
               </Block>

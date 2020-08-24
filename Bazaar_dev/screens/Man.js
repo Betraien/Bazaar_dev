@@ -15,7 +15,7 @@ export default class Man extends React.Component {
     return (
       <Input
         right
-        color="red"
+        color="black"
         style={styles.search}
         iconContent={iconContent}
         placeholder="What are you looking for?"
@@ -67,7 +67,6 @@ export default class Man extends React.Component {
     return (
       <Block flex center style={styles.home}>
         {this.renderProducts()}
-        
       </Block>
     );
   }

@@ -10,7 +10,7 @@ class DrawerItem extends React.Component {
     const { title, focused } = this.props;
 
     switch (title) {
-      case "الطلبات":
+      case "Home":
         return (
           <Icon
             size={14}
@@ -19,24 +19,6 @@ class DrawerItem extends React.Component {
             color={focused ? "white" : materialTheme.COLORS.MUTED}
           />
         );
-        case "الخدمات":
-        return (
-          <Icon
-            size={14}
-            name="shop"
-            family="GalioExtra"
-            color={focused ? "white" : materialTheme.COLORS.MUTED}
-          />
-        );
-      case "العروض":
-          return (
-            <Icon
-              size={14}
-              name="shop"
-              family="GalioExtra"
-              color={focused ? "white" : materialTheme.COLORS.MUTED}
-            />
-          );
       case "Woman":
         return (
           <Icon
@@ -47,15 +29,6 @@ class DrawerItem extends React.Component {
           />
         );
       case "Man":
-        return (
-          <Icon
-            size={15}
-            name="man"
-            family="entypo"
-            color={focused ? "white" : materialTheme.COLORS.MUTED}
-          />
-        );
-        case "Requests":
         return (
           <Icon
             size={15}
@@ -82,15 +55,6 @@ class DrawerItem extends React.Component {
             color={focused ? "white" : materialTheme.COLORS.MUTED}
           />
         );
-      case "البحث":
-        return (
-           <Icon
-             size={15}
-             name="magnifying-glass"
-             family="entypo"
-             color={focused ? "white" : materialTheme.COLORS.MUTED}
-            />
-          );  
       case "Profile":
         return (
           <Icon
@@ -100,7 +64,7 @@ class DrawerItem extends React.Component {
             color={focused ? "white" : materialTheme.COLORS.MUTED}
           />
         );
-      case "الاعدادات":
+      case "Settings":
         return (
           <Icon
             size={15}
@@ -118,7 +82,7 @@ class DrawerItem extends React.Component {
             color={focused ? "white" : materialTheme.COLORS.MUTED}
           />
         );
-      case "تسجيل دخول":
+      case "Sign In":
         return (
           <Icon
             size={15}
@@ -127,7 +91,7 @@ class DrawerItem extends React.Component {
             color={focused ? "white" : materialTheme.COLORS.MUTED}
           />
         );
-      case "تسجيل":
+      case "Sign Up":
         return (
           <Icon
             size={15}

@@ -16,6 +16,14 @@ import { Images, materialTheme } from "../constants/";
 
 const { width } = Dimensions.get("screen");
 
+const profile = {
+  avatar: Images.Profile,
+  name: "Rachel Brown",
+  type: "Seller",
+  plan: "Pro",
+  rating: 4.8
+};
+
 function CustomDrawerContent({
   drawerPosition,
   navigation,
@@ -26,10 +34,13 @@ function CustomDrawerContent({
 }) {
   const insets = useSafeArea();
   const screens = [
-    "الخدمات",
-    "الطلبات",
-    "العروض",
-    "الاعدادات",
+    "Home",
+    "Woman",
+    "Man",
+    "Kids",
+    "New Collection",
+    "Profile",
+    "Settings",
     "Components"
   ];
   return (
@@ -88,12 +99,12 @@ function CustomDrawerContent({
       </Block>
       <Block flex={0.25} style={{ paddingLeft: 7, paddingRight: 14 }}>
         <DrawerCustomItem
-          title="تسجيل دخول"
+          title="Sign In"
           navigation={navigation}
           focused={state.index === 8 ? true : false}
         />
         <DrawerCustomItem
-          title="تسجيل"
+          title="Sign Up"
           navigation={navigation}
           focused={state.index === 9 ? true : false}
         />

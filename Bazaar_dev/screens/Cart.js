@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Dimensions, Image, FlatList, TouchableWithoutFeedback } from 'react-native';
 import { Button, Block, Text, theme } from 'galio-framework';
+
 import { Product, Select } from '../components/';
 import { materialTheme, products } from '../constants/';
 import cartItems from '../constants/images/cart';
@@ -177,7 +178,7 @@ export default class Cart extends React.Component {
         <Block center>
           <Button flex center style={styles.checkout}
             color={materialTheme.COLORS.ACTIVE}
-            onPress={() => navigation.navigate('تسجيل دخول')} >
+            onPress={() => navigation.navigate('Sign In')} >
             PROCEED TO CHECKOUT
           </Button>
         </Block>
@@ -197,7 +198,7 @@ export default class Cart extends React.Component {
         <Block center style={{ paddingHorizontal: theme.SIZES.BASE }}>
           <Button flex center style={styles.checkout}
             color={materialTheme.COLORS.ACTIVE}
-            onPress={() => navigation.navigate('تسجيل دخول')} >
+            onPress={() => navigation.navigate('SignIn')} >
             PROCEED TO CHECKOUT
           </Button>
         </Block>
@@ -220,7 +221,7 @@ export default class Cart extends React.Component {
           center
           style={styles.checkout}
           color={materialTheme.COLORS.ACTIVE}
-          onPress={() => navigation.navigate('تسجيل دخول')} >
+          onPress={() => navigation.navigate('SignIn')} >
           PROCEED TO CHECKOUT
           </Button>
       </Block>

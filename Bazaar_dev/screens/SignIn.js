@@ -89,8 +89,8 @@ export default class SignIn extends React.Component {
               </Block>
             </Block>
             <Block middle style={{ paddingVertical: theme.SIZES.BASE * 2.625}}>
-              <Text center color="white" size={20}>
-                سجل دخول
+              <Text center color="white" size={14}>
+                or be classical
               </Text>
             </Block>
             <Block flex>
@@ -98,7 +98,7 @@ export default class SignIn extends React.Component {
                 <Input
                   borderless
                   color="white"
-                  placeholder="البريد الالكتروني"
+                  placeholder="Email"
                   type="email-address"
                   autoCapitalize="none"
                   bgColor='transparent'
@@ -114,7 +114,7 @@ export default class SignIn extends React.Component {
                   borderless
                   color="white"
                   iconColor="white"
-                  placeholder="كلمة المرور"
+                  placeholder="Password"
                   bgColor='transparent'
                   onBlur={() => this.toggleActive('password')}
                   onFocus={() => this.toggleActive('password')}
@@ -128,7 +128,7 @@ export default class SignIn extends React.Component {
                   onPress={() => Alert.alert('Not implemented')}
                   style={{ alignSelf: 'flex-end', lineHeight: theme.SIZES.FONT * 2 }}
                 >
-                  نسيت كلمة
+                  Forgot your password?
                   </Text>
               </Block>
               <Block flex top style={{ marginTop: 20 }}>
@@ -138,16 +138,16 @@ export default class SignIn extends React.Component {
                   style={{ height: 48 }}
                   onPress={() => Alert.alert('Sign in action',`Email: ${email} Password: ${password}`,)}
                 >
-                  تسجيل دخول
+                  SIGN IN
                 </Button>
-                <Button color="transparent" shadowless onPress={() => navigation.navigate('تسجيل')}>
+                <Button color="transparent" shadowless onPress={() => navigation.navigate('Sign Up')}>
                   <Text
                     center
                     color={theme.COLORS.WHITE}
                     size={theme.SIZES.FONT * 0.75}
                     style={{marginTop:20}}
                   >
-                    {"ليس لديك حساب؟ سجل الان"}
+                    {"Don't have an account? Sign Up"}
                   </Text>
                 </Button>
               </Block>

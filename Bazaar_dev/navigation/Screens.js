@@ -14,16 +14,13 @@ import ManScreen from "../screens/Man";
 import KidsScreen from "../screens/Kids";
 import NewCollectionScreen from "../screens/NewCollection";
 import DealsScreen from "../screens/Deals";
-import OffersScreen from "../screens/Offers";
+
 import CategoriesScreen from "../screens/Categories";
 import CategoryScreen from "../screens/Category";
 import ProductScreen from "../screens/Product";
-import RequestProductScreen from "../screens/RequestProduct";
-import OfferProductScreen from "../screens/OfferProduct";
-import ServiceProductScreen from "../screens/ServiceProduct";
 import GalleryScreen from "../screens/Gallery";
 import ChatScreen from "../screens/Chat";
-import RequestsScreen from "../screens/Requests";
+
 import CartScreen from "../screens/Cart";
 import SignInScreen from "../screens/SignIn";
 import SignUpScreen from "../screens/SignUp";
@@ -37,9 +34,6 @@ import NotificationsScreen from "../screens/Notifications";
 import PrivacyScreen from "../screens/Privacy";
 import AboutScreen from "../screens/About";
 import AgreementScreen from "../screens/Agreement";
-import ServiceScreen from "../screens/Services";
-
-
 
 import CustomDrawerContent from "./Menu";
 import { tabs } from "../constants/";
@@ -51,10 +45,10 @@ const Drawer = createDrawerNavigator();
 
 const profile = {
   avatar: Images.Profile,
-  name: "عبدالعزيز",
-  type: "ادارة",
-  plan: "A+",
-  rating: 4.9
+  name: "Rachel Brown",
+  type: "Seller",
+  plan: "Pro",
+  rating: 4.8
 };
 
 function ProfileStack(props) {
@@ -105,20 +99,19 @@ function ProfileStack(props) {
 function SettingsStack(props) {
   return (
     <Stack.Navigator
-      initialRouteName="الاعدادات"
+      initialRouteName="Settings"
       mode="card"
       headerMode="screen"
     >
       <Stack.Screen
-        name="الاعدادات"
+        name="Settings"
         component={SettingsScreen}
         options={{
           header: ({ navigation, scene }) => (
-            <Header title="الاعدادات" scene={scene} navigation={navigation} />
+            <Header title="Settings" scene={scene} navigation={navigation} />
           )
         }}
       />
-
       <Stack.Screen
         name="Agreement"
         component={AgreementScreen}
@@ -133,7 +126,6 @@ function SettingsStack(props) {
           )
         }}
       />
-
       <Stack.Screen
         name="Privacy"
         component={PrivacyScreen}
@@ -324,57 +316,6 @@ function WomanStack(props) {
           headerTransparent: true
         }}
       />
-            <Stack.Screen
-        name="RequestProduct"
-        component={RequestProductScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              back
-              white
-              transparent
-              title=""
-              navigation={navigation}
-              scene={scene}
-            />
-          ),
-          headerTransparent: true
-        }}
-      />
-            <Stack.Screen
-        name="OfferProduct"
-        component={OfferProductScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              back
-              white
-              transparent
-              title=""
-              navigation={navigation}
-              scene={scene}
-            />
-          ),
-          headerTransparent: true
-        }}
-      />
-            <Stack.Screen
-        name="ServiceProduct"
-        component={ServiceProductScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              back
-              white
-              transparent
-              title=""
-              navigation={navigation}
-              scene={scene}
-            />
-          ),
-          headerTransparent: true
-        }}
-      />
       <Stack.Screen
         name="Gallery"
         component={GalleryScreen}
@@ -399,7 +340,7 @@ function WomanStack(props) {
           header: ({ navigation, scene }) => (
             <Header
               back
-              title="عبدالعزيز الزماي"
+              title="Rachel Brown"
               navigation={navigation}
               scene={scene}
             />
@@ -421,11 +362,11 @@ function WomanStack(props) {
         }}
       />
       <Stack.Screen
-        name="البحث"
+        name="Search"
         component={SearchScreen}
         options={{
           header: ({ navigation, scene }) => (
-            <Header back title="البحث" navigation={navigation} scene={scene} />
+            <Header back title="Search" navigation={navigation} scene={scene} />
           )
         }}
       />
@@ -518,58 +459,6 @@ function ManStack(props) {
           headerTransparent: true
         }}
       />
-            <Stack.Screen
-        name="RequestProduct"
-        component={RequestProductScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              back
-              white
-              transparent
-              title=""
-              navigation={navigation}
-              scene={scene}
-            />
-          ),
-          headerTransparent: true
-        }}
-      />
-            <Stack.Screen
-        name="OfferProduct"
-        component={OfferProductScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              back
-              white
-              transparent
-              title=""
-              navigation={navigation}
-              scene={scene}
-            />
-          ),
-          headerTransparent: true
-        }}
-      />
-            <Stack.Screen
-        name="ServiceProduct"
-        component={ServiceProductScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              back
-              white
-              transparent
-              title=""
-              navigation={navigation}
-              scene={scene}
-            />
-          ),
-          headerTransparent: true
-        }}
-      />
-      
       <Stack.Screen
         name="Gallery"
         component={GalleryScreen}
@@ -616,11 +505,11 @@ function ManStack(props) {
         }}
       />
       <Stack.Screen
-        name="البحث"
+        name="Search"
         component={SearchScreen}
         options={{
           header: ({ navigation, scene }) => (
-            <Header back title="البحث" navigation={navigation} scene={scene} />
+            <Header back title="Search" navigation={navigation} scene={scene} />
           )
         }}
       />
@@ -713,57 +602,6 @@ function KidsStack(props) {
           headerTransparent: true
         }}
       />
-            <Stack.Screen
-        name="RequestProduct"
-        component={RequestProductScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              back
-              white
-              transparent
-              title=""
-              navigation={navigation}
-              scene={scene}
-            />
-          ),
-          headerTransparent: true
-        }}
-      />
-            <Stack.Screen
-        name="OfferProduct"
-        component={OfferProductScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              back
-              white
-              transparent
-              title=""
-              navigation={navigation}
-              scene={scene}
-            />
-          ),
-          headerTransparent: true
-        }}
-      />
-            <Stack.Screen
-        name="ServiceProduct"
-        component={ServiceProductScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              back
-              white
-              transparent
-              title=""
-              navigation={navigation}
-              scene={scene}
-            />
-          ),
-          headerTransparent: true
-        }}
-      />
       <Stack.Screen
         name="Gallery"
         component={GalleryScreen}
@@ -810,11 +648,11 @@ function KidsStack(props) {
         }}
       />
       <Stack.Screen
-        name="البحث"
+        name="Search"
         component={SearchScreen}
         options={{
           header: ({ navigation, scene }) => (
-            <Header back title="البحث" navigation={navigation} scene={scene} />
+            <Header back title="Search" navigation={navigation} scene={scene} />
           )
         }}
       />
@@ -953,11 +791,11 @@ function NewCollectionStack(props) {
         }}
       />
       <Stack.Screen
-        name="البحث"
+        name="Search"
         component={SearchScreen}
         options={{
           header: ({ navigation, scene }) => (
-            <Header back title="البحث" navigation={navigation} scene={scene} />
+            <Header back title="Search" navigation={navigation} scene={scene} />
           )
         }}
       />
@@ -969,279 +807,20 @@ function HomeStack(props) {
   return (
     <Stack.Navigator mode="card" headerMode="screen">
       <Stack.Screen
-        name="الخدمات"
-        component={ServiceScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              search
-              options
-              title="الخدمات"
-              navigation={navigation}
-              scene={scene}
-            />
-          )
-        }}
-      />
-
-            <Stack.Screen
-        name="العروض"
-        component={OffersScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              search
-              options
-              title="العروض"
-              navigation={navigation}
-              scene={scene}
-            />
-          )
-        }}
-      />
-
-      <Stack.Screen
-              name="الطلبات"
-              component={RequestsScreen}
-              options={{
-                header: ({ navigation, scene }) => (
-                  <Header
-                    search
-                    options
-                    title="الطلبات"
-                    navigation={navigation}
-                    scene={scene}
-                  />
-                )
-              }}
-            />
-
-      <Stack.Screen
-        name="Deals"
-        component={DealsScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              back
-              tabs={tabs.deals}
-              title="Best Deals"
-              navigation={navigation}
-              scene={scene}
-            />
-          )
-        }}
-      />
-      <Stack.Screen
-        name="Categories"
-        component={CategoriesScreen}
-        options={{
-          header: ({ navigation, scene, route }) => (
-            <Header
-              back
-              tabs={tabs.categories}
-              tabIndex={tabs.categories[1].id}
-              title="Categories"
-              navigation={navigation}
-              route={route}
-              scene={scene}
-            />
-          )
-        }}
-      />
-      <Stack.Screen
-        name="Category"
-        component={CategoryScreen}
-        options={{
-          header: ({ navigation, scene }) => {
-            const { params } = scene.descriptor;
-            const title = (params && params.headerTitle) || "Category";
-            return (
-              <Header
-                back
-                title={title}
-                navigation={navigation}
-                scene={scene}
-              />
-            );
-          }
-        }}
-      />
-      <Stack.Screen
-        name="Product"
-        component={ProductScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              back
-              white
-              transparent
-              title=""
-              navigation={navigation}
-              scene={scene}
-            />
-          ),
-          headerTransparent: true
-        }}
-      />
-         <Stack.Screen
-        name="RequestProduct"
-        component={RequestProductScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              back
-              white
-              transparent
-              title=""
-              navigation={navigation}
-              scene={scene}
-            />
-          ),
-          headerTransparent: true
-        }}
-      />
-            <Stack.Screen
-        name="OfferProduct"
-        component={OfferProductScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              back
-              white
-              transparent
-              title=""
-              navigation={navigation}
-              scene={scene}
-            />
-          ),
-          headerTransparent: true
-        }}
-      />
-            <Stack.Screen
-        name="ServiceProduct"
-        component={ServiceProductScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              back
-              white
-              transparent
-              title=""
-              navigation={navigation}
-              scene={scene}
-            />
-          ),
-          headerTransparent: true
-        }}
-      />
-      <Stack.Screen
-        name="Gallery"
-        component={GalleryScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              back
-              white
-              transparent
-              title=""
-              navigation={navigation}
-              scene={scene}
-            />
-          ),
-          headerTransparent: true
-        }}
-      />
-      <Stack.Screen
-        name="Chat"
-        component={ChatScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              back
-              title="Rachel Brown"
-              navigation={navigation}
-              scene={scene}
-            />
-          )
-        }}
-      />
-      <Stack.Screen
-        name="Cart"
-        component={CartScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              back
-              title="Shopping Cart"
-              navigation={navigation}
-              scene={scene}
-            />
-          )
-        }}
-      />
-      <Stack.Screen
-        name="البحث"
-        component={SearchScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header back title="البحث" navigation={navigation} scene={scene} />
-          )
-        }}
-      />
-    </Stack.Navigator>
-  );
-}
-
-function RequestsStack(props) {
-  return (
-    <Stack.Navigator mode="card" headerMode="screen">
-      <Stack.Screen
-        name="الطلبات"
-        component={RequestsScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              search
-              options
-              title="الطلبات"
-              navigation={navigation}
-              scene={scene}
-            />
-          )
-        }}
-      />
-
-    <Stack.Screen
-        name="الخدمات"
+        name="Home"
         component={HomeScreen}
         options={{
           header: ({ navigation, scene }) => (
             <Header
               search
               options
-              title="الخدمات"
+              title="Home"
               navigation={navigation}
               scene={scene}
             />
           )
         }}
       />
-            <Stack.Screen
-        name="العروض"
-        component={OffersScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              search
-              options
-              title="العروض"
-              navigation={navigation}
-              scene={scene}
-            />
-          )
-        }}
-      />
-
       <Stack.Screen
         name="Deals"
         component={DealsScreen}
@@ -1309,57 +888,6 @@ function RequestsStack(props) {
           headerTransparent: true
         }}
       />
-            <Stack.Screen
-        name="RequestProduct"
-        component={RequestProductScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              back
-              white
-              transparent
-              title=""
-              navigation={navigation}
-              scene={scene}
-            />
-          ),
-          headerTransparent: true
-        }}
-      />
-            <Stack.Screen
-        name="OfferProduct"
-        component={OfferProductScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              back
-              white
-              transparent
-              title=""
-              navigation={navigation}
-              scene={scene}
-            />
-          ),
-          headerTransparent: true
-        }}
-      />
-            <Stack.Screen
-        name="ServiceProduct"
-        component={ServiceProductScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              back
-              white
-              transparent
-              title=""
-              navigation={navigation}
-              scene={scene}
-            />
-          ),
-          headerTransparent: true
-        }}
-      />
       <Stack.Screen
         name="Gallery"
         component={GalleryScreen}
@@ -1406,226 +934,11 @@ function RequestsStack(props) {
         }}
       />
       <Stack.Screen
-        name="البحث"
+        name="Search"
         component={SearchScreen}
         options={{
           header: ({ navigation, scene }) => (
-            <Header back title="البحث" navigation={navigation} scene={scene} />
-          )
-        }}
-      />
-    </Stack.Navigator>
-  );
-}
-
-function OffersStack(props) {
-  return (
-    <Stack.Navigator mode="card" headerMode="screen">
-     
-     <Stack.Screen
-        name="العروض"
-        component={OffersScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              search
-              options
-              title="العروض"
-              navigation={navigation}
-              scene={scene}
-            />
-          )
-        }}
-      />
-      <Stack.Screen
-
-      
-        name="الخدمات"
-        component={HomeScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              search
-              options
-              title="الخدمات"
-              navigation={navigation}
-              scene={scene}
-            />
-          )
-        }}
-      />
-
-     
-
-      <Stack.Screen
-        name="Deals"
-        component={DealsScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              back
-              tabs={tabs.deals}
-              title="Best Deals"
-              navigation={navigation}
-              scene={scene}
-            />
-          )
-        }}
-      />
-      <Stack.Screen
-        name="Categories"
-        component={CategoriesScreen}
-        options={{
-          header: ({ navigation, scene, route }) => (
-            <Header
-              back
-              tabs={tabs.categories}
-              tabIndex={tabs.categories[1].id}
-              title="Categories"
-              navigation={navigation}
-              route={route}
-              scene={scene}
-            />
-          )
-        }}
-      />
-      <Stack.Screen
-        name="Category"
-        component={CategoryScreen}
-        options={{
-          header: ({ navigation, scene }) => {
-            const { params } = scene.descriptor;
-            const title = (params && params.headerTitle) || "Category";
-            return (
-              <Header
-                back
-                title={title}
-                navigation={navigation}
-                scene={scene}
-              />
-            );
-          }
-        }}
-      />
-      <Stack.Screen
-        name="Product"
-        component={ProductScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              back
-              white
-              transparent
-              title=""
-              navigation={navigation}
-              scene={scene}
-            />
-          ),
-          headerTransparent: true
-        }}
-      />
-            <Stack.Screen
-        name="RequestProduct"
-        component={RequestProductScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              back
-              white
-              transparent
-              title=""
-              navigation={navigation}
-              scene={scene}
-            />
-          ),
-          headerTransparent: true
-        }}
-      />
-            <Stack.Screen
-        name="OfferProduct"
-        component={OfferProductScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              back
-              white
-              transparent
-              title=""
-              navigation={navigation}
-              scene={scene}
-            />
-          ),
-          headerTransparent: true
-        }}
-      />
-            <Stack.Screen
-        name="ServiceProduct"
-        component={ServiceProductScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              back
-              white
-              transparent
-              title=""
-              navigation={navigation}
-              scene={scene}
-            />
-          ),
-          headerTransparent: true
-        }}
-      />
-      <Stack.Screen
-        name="Gallery"
-        component={GalleryScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              back
-              white
-              transparent
-              title=""
-              navigation={navigation}
-              scene={scene}
-            />
-          ),
-          headerTransparent: true
-        }}
-      />
-      <Stack.Screen
-        name="Chat"
-        component={ChatScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              back
-              title="Rachel Brown"
-              navigation={navigation}
-              scene={scene}
-            />
-          )
-        }}
-      />
-      <Stack.Screen
-        name="Cart"
-        component={CartScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header
-              back
-              title="Shopping Cart"
-              navigation={navigation}
-              scene={scene}
-            />
-          )
-        }}
-      />
-      <Stack.Screen
-        name="البحث"
-        component={SearchScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header back title="البحث" navigation={navigation} scene={scene} />
+            <Header back title="Search" navigation={navigation} scene={scene} />
           )
         }}
       />
@@ -1663,40 +976,11 @@ function AppStack(props) {
           fontWeight: "normal"
         }
       }}
-      initialRouteName="العروض"
+      initialRouteName="Home"
     >
       <Drawer.Screen
-        name="الخدمات"
+        name="Home"
         component={HomeStack}
-        options={{
-          drawerIcon: ({ focused }) => (
-            <Icon
-              size={16}
-              name="shop"
-              family="GalioExtra"
-              color={focused ? "white" : materialTheme.COLORS.MUTED}
-            />
-          )
-        }}
-      />
-      <Drawer.Screen
-        name="الطلبات"
-        component={RequestsStack}
-        options={{
-          drawerIcon: ({ focused }) => (
-            <Icon
-              size={16}
-              name="shop"
-              family="GalioExtra"
-              color={focused ? "white" : materialTheme.COLORS.MUTED}
-            />
-          )
-        }}
-      />
-      
-            <Drawer.Screen
-        name="العروض"
-        component={OffersStack}
         options={{
           drawerIcon: ({ focused }) => (
             <Icon
@@ -1780,7 +1064,7 @@ function AppStack(props) {
         }}
       />
       <Drawer.Screen
-        name="الاعدادات"
+        name="Settings"
         component={SettingsStack}
         options={{
           drawerIcon: ({ focused }) => (
@@ -1810,7 +1094,7 @@ function AppStack(props) {
         }}
       />
       <Drawer.Screen
-        name="تسجيل دخول"
+        name="Sign In"
         component={SignInScreen}
         options={{
           drawerIcon: ({ focused }) => (
@@ -1824,7 +1108,7 @@ function AppStack(props) {
         }}
       />
       <Drawer.Screen
-        name="تسجيل"
+        name="Sign Up"
         component={SignUpScreen}
         options={{
           drawerIcon: ({ focused }) => (

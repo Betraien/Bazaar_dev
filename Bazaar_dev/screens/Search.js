@@ -16,9 +16,9 @@ import { products, Images } from '../constants/';
 import { Icon, Product } from '../components/';
 
 const suggestions = [
-  { id: 'auto', title: 'السيارات', image: Images.Products['Auto'] },
-  { id: 'makeup', title: 'الاجهزة', image: Images.Products['Makeup'] },
-  { id: 'watches', title: 'الساعات', image: Images.Products['Watches'] },
+  { id: 'auto', title: 'Auto', image: Images.Products['Auto'] },
+  { id: 'makeup', title: 'Makeup', image: Images.Products['Makeup'] },
+  { id: 'watches', title: 'Watches', image: Images.Products['Watches'] },
 ]
 
 export default class Search extends React.Component {
@@ -50,7 +50,7 @@ export default class Search extends React.Component {
     const { search } = this.state;
     const iconSearch = (search ?
       <TouchableWithoutFeedback onPress={() => this.setState({ search: '' })}>
-        <Icon size={16} color={theme.COLORS.MUTED} name="magnifying-glass" family="entypo" />
+        <Icon size={16} color={theme.COLORS.MUTED} name="page-remove" family="foundation" />
       </TouchableWithoutFeedback> :
       <Icon size={16} color={theme.COLORS.MUTED} name="magnifying-glass" family="entypo" />
     )
@@ -65,7 +65,7 @@ export default class Search extends React.Component {
         iconContent={iconSearch}
         defaultValue={search}
         style={[styles.search, this.state.active ? styles.shadow : null]}
-        placeholder="ماذا تبحث عنه؟"
+        placeholder="What are you looking for?"
         onFocus={() => this.setState({ active: true })}
         onBlur={() => this.setState({ active: false })}
         onChangeText={this.handleSearchChange}
@@ -77,7 +77,11 @@ export default class Search extends React.Component {
     return (
       <Block style={styles.notfound}>
         <Text size={18}>
-          لم نجد "<Text bold>{this.state.search}</Text>" في البحث.
+          We didn’t find "<Text bold>{this.state.search}</Text>" in our store.
+        </Text>
+
+        <Text size={18} style={{ marginTop: theme.SIZES.BASE }}>
+          You can see more products from other categories.
         </Text>
       </Block>
     )
@@ -138,7 +142,7 @@ export default class Search extends React.Component {
         <Block style={{ width: width - 40 }}>
           {this.renderNotFound()}
           {this.renderSuggestions()}
-          <Text size={18}>نشر حديثا</Text>
+          <Text size={18}>Daily Deals</Text>
           {this.renderDeals()}
         </Block>
       )

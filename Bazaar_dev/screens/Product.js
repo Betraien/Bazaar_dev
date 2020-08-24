@@ -16,6 +16,7 @@ import materialTheme from '../constants/Theme';
 import Images from "../constants/Images";
 import { iPhoneX, HeaderHeight } from "../constants/utils";
 const { height, width } = Dimensions.get('window');
+
 export default class Product extends React.Component {
   state = {
     selectedSize: null,
@@ -132,29 +133,50 @@ export default class Product extends React.Component {
             {this.renderChatButton()}
             <ScrollView vertical={true} showsVerticalScrollIndicator={false}>
               <Block style={{ paddingHorizontal: theme.SIZES.BASE, paddingTop: theme.SIZES.BASE * 2 }}>
-                <Text size={28} center style={{ paddingBottom: 24 }}>{product.title}</Text>
+                <Text size={28} style={{ paddingBottom: 24 }}>{product.title}</Text>
                 <Block row space="between">
                   <Block row>
                     <Image source={{ uri: Images.Profile }} style={styles.avatar} />
                     <Block>
-                      <Text center size={14}>عبدالعزيز</Text>
-                      <Text center style={{color:"red"}} size={14} muted>ادارة</Text>
+                      <Text size={14}>Rachel Brown</Text>
+                      <Text size={14} muted>Pro Seller</Text>
                     </Block>
                   </Block>
-                  <Text center size={18} bold>{product.price} ريال</Text>
+                  <Text size={18} bold>$735</Text>
                 </Block>
               </Block>
               <Block style={{ padding: theme.SIZES.BASE }}>
-                <Text center size={16}>تفاصيل العرض</Text>
+                <Text size={16}>Size</Text>
                 <Block card style={{ marginTop: 16 }}>
-<Text center right> {product.description} </Text>
+                  <Block row>
+                    <Block flex middle style={[styles.size, styles.roundTopLeft, selectedSize === 'XS' ? styles.active : null ]}>
+                      {this.renderSize('XS')}
+                    </Block>
+                    <Block flex middle style={[styles.size, selectedSize === 'S' ? styles.active : null, ]}>
+                      {this.renderSize('S')}
+                    </Block>
+                    <Block flex middle style={[styles.size, styles.roundTopRight, selectedSize === 'M' ? styles.active : null, ]}>
+                      {this.renderSize('M')}
+                    </Block>
+                  </Block>
+                  <Block row>
+                    <Block flex middle style={[styles.size, styles.roundBottomLeft, selectedSize === 'L' ? styles.active : null, ]}>
+                      {this.renderSize('L')}
+                    </Block>
+                    <Block flex middle style={[styles.size, { borderBottomWidth: 0 }, selectedSize === 'XL' ? styles.active : null, ]}>
+                      {this.renderSize('XL')}
+                    </Block>
+                    <Block flex middle style={[styles.size, styles.roundBottomRight, selectedSize === '2XL' ? styles.active : null, ]}>
+                      {this.renderSize('2XL')}
+                    </Block>
+                  </Block>
                 </Block>
                 <Button
                   shadowless
                   style={styles.addToCart}
-                  color= {materialTheme.COLORS.BUTTON_COLOR}
+                  color={materialTheme.COLORS.BUTTON_COLOR}
                   onPress={() => navigation.navigate('Cart')}>
-                  hhhhh
+                  ADD TO CART
                 </Button>
               </Block>
             </ScrollView>

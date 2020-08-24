@@ -21,25 +21,25 @@ export default class Onboarding extends React.Component {
             style={{ height: height / 1.8, width, zIndex: 1 }}
           />
         </Block>
-        <Block flex={0.9} space="between" style={styles.padded}>
+        <Block flex={1.3} space="between" style={styles.padded}>
           <Block style={{ paddingTop: 50, position: 'relative' }}>
             <LinearGradient
               style={styles.gradient}
-              colors={['rgba(32,66,144,5)', 'rgba(230,222,243,0.2)']} />
+              colors={['rgba(0,0,0,0)', 'rgba(0,0,0,1)']} />
             <Block style={{ marginBottom: theme.SIZES.BASE / 2, paddingHorizontal: theme.SIZES.BASE * 2, zIndex: 3 }}>
               <Block>
-                <Text color="white" size={60}>مطلوب</Text>
+                <Text color="white" size={60}>Material</Text>
               </Block>
               <Block row>
-                <Text color="white" size={60}>Matloob</Text>
+                <Text color="white" size={60}>Kit</Text>
                 <Block middle style={styles.pro}>
-                  <Text size={30} color="white">™</Text>
+                  <Text size={16} color="white">PRO</Text>
                 </Block>
               </Block>
             </Block>
             <Block style={{ paddingHorizontal: theme.SIZES.BASE * 2 }}>
               <Text size={16} color='rgba(255,255,255,0.6)'>
-              عروض يومية ضمن مجموعة كبيرة من المنتجات
+                Fully coded React Native components.
               </Text>
             </Block>
           </Block>
@@ -47,9 +47,9 @@ export default class Onboarding extends React.Component {
             <Button
               shadowless
               style={styles.button}
-              color={'#DEDEDE'}
+              color={materialTheme.COLORS.BUTTON_COLOR}
               onPress={() => navigation.navigate('App')}>
-             <Text color={"#374A54"} size={30}> أبدا</Text> 
+              GET STARTED
             </Button>
           </Block>
         </Block>
@@ -60,7 +60,7 @@ export default class Onboarding extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'rgba(60,66,120,99)',
+    backgroundColor: theme.COLORS.BLACK,
   },
   padded: {
     // paddingHorizontal: theme.SIZES.BASE * 2,
@@ -68,10 +68,9 @@ const styles = StyleSheet.create({
     bottom: theme.SIZES.BASE,
   },
   button: {
-    width: width - theme.SIZES.BASE * 9,
+    width: width - theme.SIZES.BASE * 4,
     height: theme.SIZES.BASE * 3,
     shadowRadius: 0,
-    borderRadius: 88,
     shadowOpacity: 0,
   },
   pro: {

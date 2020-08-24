@@ -15,11 +15,11 @@ export default class Home extends React.Component {
     return (
       <Input
         right
-        color="red"
-        style={styles.WHITE}
+        color="black"
+        style={styles.search}
         iconContent={iconContent}
         placeholder="What are you looking for?"
-        onFocus={() => navigation.navigate('البحث')}
+        onFocus={() => navigation.navigate('Search')}
       />
     )
   }
@@ -52,11 +52,12 @@ export default class Home extends React.Component {
         contentContainerStyle={styles.products}>
         <Block flex>
           <Product product={homeImages[0]} horizontal />
-            <Product product={homeImages[1]} horizontal />
-            <Product product={homeImages[2]} horizontal />
-     
-         
-          <Product product={homeImages[4]} horizontal />
+          <Block flex row>
+            <Product product={homeImages[1]} style={{ marginRight: theme.SIZES.BASE }} />
+            <Product product={homeImages[2]} />
+          </Block>
+          <Product product={homeImages[3]} horizontal />
+          <Product product={homeImages[4]} full />
         </Block>
       </ScrollView>
     )
@@ -73,8 +74,7 @@ export default class Home extends React.Component {
 
 const styles = StyleSheet.create({
   home: {
-    width: width,  
-    backgroundColor: '#e0e0e0',  
+    width: width,    
   },
   search: {
     height: 48,
