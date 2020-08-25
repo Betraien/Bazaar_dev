@@ -1,7 +1,8 @@
 import React from 'react';
 import { withNavigation } from '@react-navigation/compat';
 import { StyleSheet, Dimensions, Image, TouchableWithoutFeedback } from 'react-native';
-import { Block, Text, theme } from 'galio-framework';
+import { Block, Button, Text, theme } from 'galio-framework';
+import { Ionicons } from '@expo/vector-icons';
 
 const { width } = Dimensions.get('screen');
 
@@ -20,7 +21,13 @@ class Product extends React.Component {
         <TouchableWithoutFeedback onPress={() => navigation.navigate('Product', { product: product })}>
           <Block flex space="between" style={styles.productDescription}>
             <Text size={14} style={styles.productTitle}>{product.title}</Text>
-            <Text size={12} muted={!priceColor} color={priceColor}>${product.price}</Text>
+            <Text size={12} muted={!priceColor} color={priceColor}>{product.price} SR</Text>
+            <Block style={{flex: 1, flexDirection: 'row-reverse'}}>
+            <Ionicons name="ios-cart" size={30} color="grey" onPress={() => navigation.navigate('Cart')}/>
+            <Block style={{flex: 1, flexDirection: 'row'}}>
+            <Ionicons name="md-heart-empty" size={30} color="crimson" onPress={() => navigation.navigate('Deals')}/>
+            </Block>
+            </Block>
           </Block>
         </TouchableWithoutFeedback>
       </Block>
