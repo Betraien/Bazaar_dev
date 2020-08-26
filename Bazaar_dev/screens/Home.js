@@ -1,13 +1,24 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { StyleSheet, Dimensions, ScrollView } from 'react-native';
 import { Button, Block, Text, Input, theme } from 'galio-framework';
-
 import { Icon, Product } from '../components/';
-
+import { db } from '../config';
 const { width } = Dimensions.get('screen');
 import homeImages from '../constants/images/home';
+let itemsRef = db.ref('/Main');
 
 export default class Home extends React.Component {
+  state = {
+    items: []
+  };
+  componentDidMount(){
+    itemsRef.on('value', snapshot => {
+      let data = snapshot.val();
+      let items = Object.values(data);
+      this.setState({ items });
+  })
+}
+
   renderSearch = () => {
     const { navigation } = this.props;
     const iconContent = <Icon size={16} color={theme.COLORS.MUTED} name="zoom-in" family="material" />
@@ -51,7 +62,7 @@ export default class Home extends React.Component {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.products}>
         <Block flex>
-          <Product product={homeImages[0]} horizontal />      
+          <Product product={this.state.items[0]} horizontal />      
             <Product product={homeImages[1]} horizontal />
             <Product product={homeImages[2]} horizontal />
           <Product product={homeImages[3]} horizontal />
