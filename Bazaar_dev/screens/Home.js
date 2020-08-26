@@ -5,7 +5,7 @@ import { Icon, Product } from '../components/';
 import { db } from '../config';
 const { width } = Dimensions.get('screen');
 import homeImages from '../constants/images/home';
-let itemsRef = db.ref('/Main');
+let itemsRef = db.ref('/home');
 
 export default class Home extends React.Component {
   state = {
