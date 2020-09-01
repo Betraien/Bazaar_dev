@@ -1,4 +1,4 @@
-import Firebase from 'firebase';
+import firebase from 'firebase';
 let config = {
     apiKey: "AIzaSyBHt-qQf2vO5qgXXEsOQfT4dMirfawU2rM",
     authDomain: "skyelite-679ef.firebaseapp.com",
@@ -9,6 +9,5 @@ let config = {
     appId: "1:519893458934:web:446896cd3dc8365c25b1d7",
     measurementId: "G-XFHCTP73VK"
 };
-let app = Firebase.initializeApp(config);
-firebase.analytics();
+let app = firebase.initializeApp(config);
 export const db = app.database();

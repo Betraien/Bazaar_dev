@@ -12,12 +12,10 @@ export default class Home extends React.Component {
     items: []
   };
   componentDidMount(){
-    itemsRef.on('value', snapshot => {
-      let data = snapshot.val();
-      let items = Object.values(data);
-      this.setState({ items });
-  })
-}
+
+  }
+
+
 
   renderSearch = () => {
     const { navigation } = this.props;
@@ -62,7 +60,6 @@ export default class Home extends React.Component {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.products}>
         <Block flex>
-          <Product product={this.state.items[0]} horizontal />      
             <Product product={homeImages[1]} horizontal />
             <Product product={homeImages[2]} horizontal />
           <Product product={homeImages[3]} horizontal />
