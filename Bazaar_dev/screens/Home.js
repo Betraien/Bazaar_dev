@@ -4,17 +4,42 @@ import { Button, Block, Text, Input, theme } from 'galio-framework';
 import { Icon, Product } from '../components/';
 import { db } from '../config';
 const { width } = Dimensions.get('screen');
+import { getProduct} from '../api/ProductsApi';
 import homeImages from '../constants/images/home';
-let itemsRef = db.ref('/home');
 
 export default class Home extends React.Component {
   state = {
-    items: []
-  };
-  componentDidMount(){
-
+    productList: [],
+    selectedIndex: 0
+  }
+  onProductAdded = (aProduct) => {
+    this.setState(prevState => ({
+      productList: [...prevState.productList, aProduct]
+    }));
+    this.props.navigation.popToTop();
   }
 
+  onProductDeleted = () => {
+
+    var newProductList = [...this.state.productList];
+    newProductList.splice(this.state.selectedIndex, 1);
+
+    this.setState(prevState => ({
+      productList: prevState.productList = newProductList
+    }));
+
+    this.props.navigation.popToTop();
+  }
+
+  onProductReceived = (productList) => {
+    this.setState(prevState => ({
+      productList: prevState.productList = productList
+    }));
+  }
+
+  componentDidMount() {
+    getProduct(this.onProductReceived);
+  }
 
 
   renderSearch = () => {
@@ -60,10 +85,7 @@ export default class Home extends React.Component {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.products}>
         <Block flex>
-            <Product product={homeImages[1]} horizontal />
-            <Product product={homeImages[2]} horizontal />
-          <Product product={homeImages[3]} horizontal />
-          <Product product={homeImages[4]} horizontal />
+          <Product product={this.state.items[0]} horizontal />      
         </Block>
       </ScrollView>
     )
