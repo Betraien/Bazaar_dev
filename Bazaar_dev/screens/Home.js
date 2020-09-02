@@ -85,7 +85,7 @@ export default class Home extends React.Component {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.products}>
         <Block flex>
-          <Product product={this.state.items[0]} horizontal />      
+          <Product product= {this.state.productList[0]} horizontal />      
         </Block>
       </ScrollView>
     )
