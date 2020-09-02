@@ -12,9 +12,9 @@ export default class Home extends React.Component {
     productList: [],
     selectedIndex: 0
   }
-  onProductAdded = (aProduct) => {
+  onProductAdded = (product) => {
     this.setState(prevState => ({
-      productList: [...prevState.productList, aProduct]
+      productList: [...prevState.productList, product]
     }));
     this.props.navigation.popToTop();
   }
