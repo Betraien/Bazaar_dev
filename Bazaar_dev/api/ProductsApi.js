@@ -5,7 +5,7 @@ export function addProduct(product, addComplete){
     firebase.firestore()
     .collection('Products').add({
     title: product.title,
-    image: product.image,
+   // image: product.image,
     price: product.price,
     createdAt: firebase.firestore.FieldValue.serverTimestamp()
         }).then((snapshot) => snapshot.get()
@@ -19,11 +19,12 @@ export async function getProduct(productRetreived){
     .collection('Products')
     .orderBy('createdAt')
     .get()
+    console.log(snapshot)
 
     snapshot.forEach((doc) => {
     productList.push(doc.data());
     });
 
-    console.log(productList);
+  //  console.log(productList);
     productRetreived(productList);
 }

@@ -1,5 +1,14 @@
-import firebase from 'firebase';
-let config = {
+import * as firebase from 'firebase';
+
+// Optionally import the services that you want to use
+//import "firebase/auth";
+//import "firebase/database";
+//import "firebase/firestore";
+//import "firebase/functions";
+//import "firebase/storage";
+
+// Initialize Firebase
+const firebaseConfig = {
     apiKey: "AIzaSyBHt-qQf2vO5qgXXEsOQfT4dMirfawU2rM",
     authDomain: "skyelite-679ef.firebaseapp.com",
     databaseURL: "https://skyelite-679ef.firebaseio.com",
@@ -9,5 +18,5 @@ let config = {
     appId: "1:519893458934:web:446896cd3dc8365c25b1d7",
     measurementId: "G-XFHCTP73VK"
 };
-let app = firebase.initializeApp(config);
-export const db = app.database();
+
+firebase.initializeApp(firebaseConfig);

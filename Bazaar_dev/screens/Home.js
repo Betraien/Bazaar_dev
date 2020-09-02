@@ -9,7 +9,7 @@ import homeImages from '../constants/images/home';
 
 export default class Home extends React.Component {
   state = {
-    productList: [],
+    productsList: [],
     selectedIndex: 0
   }
   onProductAdded = (product) => {
@@ -32,13 +32,15 @@ export default class Home extends React.Component {
   }
 
   onProductReceived = (productList) => {
-    this.setState(prevState => ({
-      productList: prevState.productList = productList
-    }));
+    this.setState({
+      productsList: JSON.parse(productList)
+    });
+
   }
 
   componentDidMount() {
     getProduct(this.onProductReceived);
+
   }
 
 
@@ -80,12 +82,15 @@ export default class Home extends React.Component {
   }
 
   renderProducts = () => {
+
     return (
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.products}>
+          
         <Block flex>
-          <Product product= {this.state.productList[0]} horizontal />      
+          {console.log(this.state.productsList[0])}
+         {/*<Product product = {this.state.productsList[0]} horizontal />*/}
         </Block>
       </ScrollView>
     )
