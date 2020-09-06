@@ -1,17 +1,18 @@
 import firebase from 'firebase';
 
-
-export function addProduct(product, addComplete){
+export function AddProducts(Product) {
+    Product.createdAt = firebase.firestore.FieldValue.serverTimestamp();
+  
     firebase.firestore()
-    .collection('Products').add({
-    title: product.title,
-   // image: product.image,
-    price: product.price,
-    createdAt: firebase.firestore.FieldValue.serverTimestamp()
-        }).then((snapshot) => snapshot.get()
-        ).then((productData) => addComplete( productData.data()))
-        .catch((error) => console.log(error));
-} 
+      .collection('Products')
+      .add(Product)
+      .then((snapshot) => {
+        Product.id = snapshot.id;
+        snapshot.set(Product);
+      }).then(() => console.log("success"))
+      .catch((error) => console.log(error));
+  }
+
 
 export async function getProduct(productRetreived){
     var productList = [];

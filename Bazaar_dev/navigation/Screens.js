@@ -7,6 +7,7 @@ import { Icon, Header } from "../components/";
 import { Images, materialTheme } from "../constants/";
 
 // screens
+import AddProductScreen from "../screens/AddProduct";
 import OnboardingScreen from "../screens/Onboarding";
 import HomeScreen from "../screens/Home";
 import WomanScreen from "../screens/Woman";
@@ -37,6 +38,7 @@ import AgreementScreen from "../screens/Agreement";
 
 import CustomDrawerContent from "./Menu";
 import { tabs } from "../constants/";
+import AddProduct from "../screens/AddProduct";
 
 const { width } = Dimensions.get("screen");
 
@@ -822,6 +824,21 @@ function HomeStack(props) {
         }}
       />
       <Stack.Screen
+        name="AddProduct"
+        component={AddProductScreen}
+        options={{
+          header: ({ navigation, scene }) => (
+            <Header
+              search
+              options
+              title="Add Product"
+              navigation={navigation}
+              scene={scene}
+            />
+          )
+        }}
+      />
+      <Stack.Screen
         name="Deals"
         component={DealsScreen}
         options={{
@@ -946,6 +963,44 @@ function HomeStack(props) {
   );
 }
 
+function AddProductStack(props){
+  return (
+  <Stack.Navigator mode="card" headerMode="screen">
+     
+      <Stack.Screen
+        name="AddProduct"
+        component={AddProductScreen}
+        options={{
+          header: ({ navigation, scene }) => (
+            <Header
+              search
+              options
+              title="Add Product"
+              navigation={navigation}
+              scene={scene}
+            />
+          )
+        }}
+      />
+       <Stack.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{
+          header: ({ navigation, scene }) => (
+            <Header
+              search
+              options
+              title="Home"
+              navigation={navigation}
+              scene={scene}
+            />
+          )
+        }}
+      />
+      
+      </Stack.Navigator>
+  )
+}
 function AppStack(props) {
   return (
     <Drawer.Navigator
@@ -981,6 +1036,20 @@ function AppStack(props) {
       <Drawer.Screen
         name="Home"
         component={HomeStack}
+        options={{
+          drawerIcon: ({ focused }) => (
+            <Icon
+              size={16}
+              name="shop"
+              family="GalioExtra"
+              color={focused ? "white" : materialTheme.COLORS.MUTED}
+            />
+          )
+        }}
+      />
+      <Drawer.Screen
+        name="AddProduct"
+        component={AddProductStack}
         options={{
           drawerIcon: ({ focused }) => (
             <Icon

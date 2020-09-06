@@ -41,7 +41,8 @@ function CustomDrawerContent({
     "New Collection",
     "Profile",
     "Settings",
-    "Components"
+    "Components",
+    "AddProduct"
   ];
   return (
     <Block
