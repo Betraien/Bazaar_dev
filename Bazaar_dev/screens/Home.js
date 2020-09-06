@@ -9,7 +9,7 @@ import homeImages from '../constants/images/home';
 
 export default class Home extends React.Component {
   state = {
-    productsList: [],
+    productsList: [{price:0, title: " ", image:"vgff", createdAt:"2020-1-1"}],
     selectedIndex: 0
   }
   onProductAdded = (product) => {
@@ -33,7 +33,7 @@ export default class Home extends React.Component {
 
   onProductReceived = (productList) => {
     this.setState({
-      productsList: JSON.parse(productList)
+      productsList: productList
     });
 
   }
@@ -89,8 +89,8 @@ export default class Home extends React.Component {
         contentContainerStyle={styles.products}>
           
         <Block flex>
-          {console.log(this.state.productsList[0])}
-         {/*<Product product = {this.state.productsList[0]} horizontal />*/}
+          
+         <Product product = {this.state.productsList[0]} horizontal />
         </Block>
       </ScrollView>
     )

@@ -25,6 +25,5 @@ export async function getProduct(productRetreived){
     productList.push(doc.data());
     });
 
-  //  console.log(productList);
     productRetreived(productList);
 }
